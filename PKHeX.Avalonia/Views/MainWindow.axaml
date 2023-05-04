@@ -3,18 +3,55 @@
         xmlns:vm="using:PKHeX.Avalonia.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d"
         x:Class="PKHeX.Avalonia.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="PKHeX.Avalonia">
+    <DockPanel Background="Chocolate">
+        <Menu DockPanel.Dock="Top" Background="#FFA9D1F4">
+            <MenuItem Header="File">
+                <MenuItem Header="Open" />
+                <MenuItem Header="Save PKM" />
+                <MenuItem Header="Export to SAV" />
+                <Separator />
+                <MenuItem Header="Quit" />
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Undo Last Change"></MenuItem>
+                <MenuItem Header="Redo Last Change"></MenuItem>
+                <!-- <Separator></Separator> -->
+            </MenuItem>
+            <MenuItem Header="Tools">
+                <MenuItem Header="Showdown">
+                    <MenuItem Header="Import Set from Clipboard" />
+                    <MenuItem Header="Export Set from Clipboard" />
+                    <MenuItem Header="Export Party to Clipboard" />
+                    <MenuItem Header="Export Current Box to Clipboard" />
+                </MenuItem>
+                <MenuItem Header="Data">
+                    <MenuItem Header="Load Boxes"></MenuItem>
+                    <MenuItem Header="Dump Boxes"></MenuItem>
+                    <MenuItem Header="Dump Box"></MenuItem>
+                    <MenuItem Header="Box Data Report"></MenuItem>
+                    <MenuItem Header="PKM Database"></MenuItem>
+                    <MenuItem Header="Mystery Gift Database"></MenuItem>
+                    <MenuItem Header="Batch Editor"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="Open Folder" />
+            </MenuItem>
+            <MenuItem Header="Help">
+                <MenuItem Header="Settings"></MenuItem>
+                <MenuItem Header="About PKHeX"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <!-- temp body-->
+        <TextBox AcceptsReturn="True" />
 
-    <Design.DataContext>
-        <!-- This only sets the DataContext for the previewer in an IDE,
-             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+        <Design.DataContext>
+            ~1~ This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) @1@
+            <vm:MainWindowViewModel />
+        </Design.DataContext>
+    </DockPanel>
 </Window>
