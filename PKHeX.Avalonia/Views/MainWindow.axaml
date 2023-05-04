@@ -9,49 +9,142 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="PKHeX.Avalonia">
     <DockPanel Background="Chocolate">
-        <Menu DockPanel.Dock="Top" Background="#FFA9D1F4">
+        <Menu DockPanel.Dock="Top" Background="White">
             <MenuItem Header="File">
-                <MenuItem Header="Open" />
-                <MenuItem Header="Save PKM" />
-                <MenuItem Header="Export to SAV" />
+                <MenuItem Header="Open">
+                    <MenuItem.Icon>
+                        <Image Source="/Assets/Images/Program/open.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Save PKM">
+                    <MenuItem.Icon>
+                        <Image Source="/Assets/Images/Program/savePKM.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Export to SAV" IsEnabled="false">
+                    <MenuItem.Icon>
+                        <Image Source="/Assets/Images/Program/saveSAV.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
                 <Separator />
-                <MenuItem Header="Quit" />
+                <MenuItem Header="Quit">
+                    <MenuItem.Icon>
+                        <Image Source="/Assets/Images/Program/exit.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
             <MenuItem Header="Edit">
-                <MenuItem Header="Undo Last Change"></MenuItem>
-                <MenuItem Header="Redo Last Change"></MenuItem>
+                <MenuItem Header="Undo Last Change">
+                    <MenuItem.Icon>
+                        <Image Source="/Assets/Images/Program/bak.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="Redo Last Change">
+                    <MenuItem.Icon>
+                        <Image Source="/Assets/Images/Program/redo.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
                 <!-- <Separator></Separator> -->
             </MenuItem>
             <MenuItem Header="Tools">
                 <MenuItem Header="Showdown">
-                    <MenuItem Header="Import Set from Clipboard" />
-                    <MenuItem Header="Export Set from Clipboard" />
-                    <MenuItem Header="Export Party to Clipboard" />
-                    <MenuItem Header="Export Current Box to Clipboard" />
+                    <MenuItem.Icon>
+                        <Image Source="/Assets/Images/Program/showdown.png" />
+                    </MenuItem.Icon>
+                    <MenuItem Header="Import Set from Clipboard">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Images/Program/import.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Export Set from Clipboard">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Images/Program/export.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Export Party to Clipboard">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Images/Program/export.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Export Current Box to Clipboard">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Images/Program/export.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
                 </MenuItem>
                 <MenuItem Header="Data">
-                    <MenuItem Header="Load Boxes"></MenuItem>
-                    <MenuItem Header="Dump Boxes"></MenuItem>
-                    <MenuItem Header="Dump Box"></MenuItem>
-                    <MenuItem Header="Box Data Report"></MenuItem>
-                    <MenuItem Header="PKM Database"></MenuItem>
-                    <MenuItem Header="Mystery Gift Database"></MenuItem>
-                    <MenuItem Header="Batch Editor"></MenuItem>
+                    <MenuItem.Icon>
+                        <Image Source="/Assets/Images/Program/data.png" />
+                    </MenuItem.Icon>
+                    <MenuItem Header="Load Boxes">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Images/Program/load.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Dump Boxes">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Images/Program/dump.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Dump Box">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Images/Program/dump.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Box Data Report">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Images/Program/report.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="PKM Database">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Images/Program/database.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Mystery Gift Database">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Images/Program/gift.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="Batch Editor">
+                        <MenuItem.Icon>
+                            <Image Source="/Assets/Images/Program/settings.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
                 </MenuItem>
-                <MenuItem Header="Open Folder" />
+                <MenuItem Header="Open Folder">
+                    <MenuItem.Icon>
+                        <Image Source="/Assets/Images/Program/folder.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
             <MenuItem Header="Help">
-                <MenuItem Header="Settings"></MenuItem>
-                <MenuItem Header="About PKHeX"></MenuItem>
+                <MenuItem Header="Settings">
+                    <MenuItem.Icon>
+                        <Image Source="/Assets/Images/Program/settings.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="About PKHeX">
+                    <MenuItem.Icon>
+                        <Image Source="/Assets/Images/Program/about.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
             </MenuItem>
         </Menu>
-        <!-- temp body-->
-        <TextBox AcceptsReturn="True" />
+        <!-- LEFT MENU -->
+        <Rectangle Fill="Blue" Width="100" DockPanel.Dock="Left" />
+        <!-- RIGHT MENU (BOXES) -->
+        <Rectangle Fill="Orange" Width="100" DockPanel.Dock="Right" />
+        <!-- MAIN BODY -->
+        <Rectangle Fill="Gray" />
 
+        <!--
         <Design.DataContext>
-            ~1~ This only sets the DataContext for the previewer in an IDE,
-            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) @1@
+            ~2~ This only sets the DataContext for the previewer in an IDE,
+            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) @2@
             <vm:MainWindowViewModel />
         </Design.DataContext>
+        -->
+
     </DockPanel>
 </Window>
