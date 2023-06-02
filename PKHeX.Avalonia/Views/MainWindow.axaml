@@ -10,7 +10,7 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="PKHeX.Avalonia">
     <DockPanel Background="Chocolate">
-        <v:ToolbarView DockPanel.Dock="Top" Background="White" />
+        <v:ToolbarView DockPanel.Dock="Top" Background="White" DataContext="{Binding Toolbar}" />
         <!-- LEFT MENU -->
         <Rectangle Fill="Blue" Width="100" DockPanel.Dock="Left" />
         <!-- RIGHT MENU (BOXES) -->
