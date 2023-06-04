@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
+        x:Class="PKHeX.Avalonia.Views.AboutView"
+        Title="About">
+    <TabControl HorizontalAlignment="Left">
+        <TabItem Header="Shortcuts">
+            <ScrollViewer>
+                <TextBlock>TBU</TextBlock>
+            </ScrollViewer>
+        </TabItem>
+        <TabItem Header="Changelogs">
+            <ScrollViewer>
+                <TextBlock>TBU</TextBlock>
+            </ScrollViewer>
+        </TabItem>
+    </TabControl>
+</Window>
+

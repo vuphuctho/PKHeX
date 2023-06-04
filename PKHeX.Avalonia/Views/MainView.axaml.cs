@@ -2,9 +2,9 @@ using Avalonia.Controls;
 
 namespace PKHeX.Avalonia.Views;
 
-public partial class MainWindow : Window
+public partial class MainView : Window
 {
-    public MainWindow()
+    public MainView()
     {
         InitializeComponent();
     }
