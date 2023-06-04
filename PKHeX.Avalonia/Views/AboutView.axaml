@@ -2,18 +2,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
+        mc:Ignorable="d"
+        Width="600" Height="600" CanResize="False"
         x:Class="PKHeX.Avalonia.Views.AboutView"
         Title="About">
     <TabControl HorizontalAlignment="Left">
-        <TabItem Header="Shortcuts">
+        <TabItem>
+            <TabItem.Header>
+                <TextBlock FontSize="16">Shortcuts</TextBlock>
+            </TabItem.Header>
             <ScrollViewer>
                 <TextBlock>TBU</TextBlock>
             </ScrollViewer>
         </TabItem>
-        <TabItem Header="Changelogs">
+        <TabItem IsSelected="True">
+            <TabItem.Header>
+                <TextBlock FontSize="16">Changelogs</TextBlock>
+            </TabItem.Header>
             <ScrollViewer>
-                <TextBlock>TBU</TextBlock>
+                <TextBlock>TBU 2</TextBlock>
             </ScrollViewer>
         </TabItem>
     </TabControl>
