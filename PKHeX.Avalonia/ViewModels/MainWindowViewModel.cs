@@ -2,9 +2,5 @@
 
 public class MainWindowViewModel : ViewModelBase
 {
-    public ToolbarViewModel Toolbar { get; }
-    public MainWindowViewModel()
-    {
-        Toolbar = new ToolbarViewModel();
-    }
+    public string Greeting => "Welcome to Avalonia!";
 }

@@ -3,27 +3,18 @@
         xmlns:vm="using:PKHeX.Avalonia.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:v="clr-namespace:PKHeX.Avalonia.Views"
-        mc:Ignorable="d"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="PKHeX.Avalonia.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
         Title="PKHeX.Avalonia">
-    <DockPanel Background="Chocolate">
-        <v:ToolbarView DockPanel.Dock="Top" Background="White" DataContext="{Binding Toolbar}" />
-        <!-- LEFT MENU -->
-        <Rectangle Fill="Blue" Width="100" DockPanel.Dock="Left" />
-        <!-- RIGHT MENU (BOXES) -->
-        <Rectangle Fill="Orange" Width="100" DockPanel.Dock="Right" />
-        <!-- MAIN BODY -->
-        <Rectangle Fill="Gray" />
-        <!--
-        <Design.DataContext>
-            ~2~ This only sets the DataContext for the previewer in an IDE,
-            to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) @2@
-            <vm:MainWindowViewModel />
-        </Design.DataContext>
-        -->
 
-    </DockPanel>
+    <Design.DataContext>
+        <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
 </Window>
