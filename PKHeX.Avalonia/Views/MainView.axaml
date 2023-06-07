@@ -9,8 +9,8 @@
         CanResize="True"
         x:Class="PKHeX.Avalonia.Views.MainView"
         x:DataType="vm:MainViewModel"
-        Icon="/Assets/avalonia-logo.ico"
-        Title="PKHeX.Avalonia">
+        Icon="/Assets/icon.ico"
+        Title="PKHeX">
     <StackPanel>
         <DockPanel>
             <Menu DockPanel.Dock="Top">
