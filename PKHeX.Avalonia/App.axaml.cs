@@ -6,6 +6,8 @@ using Avalonia.Xaml.Interactions.Core;
 using Avalonia.Markup.Xaml;
 using HanumanInstitute.MvvmDialogs;
 using HanumanInstitute.MvvmDialogs.Avalonia;
+using PKHeX.Avalonia.BusinessLogics;
+using PKHeX.Avalonia.Services;
 using PKHeX.Avalonia.ViewModels;
 using PKHeX.Avalonia.Views;
 using Splat;
@@ -24,8 +26,20 @@ public partial class App : Application
                 dialogFactory: new DialogFactory().AddMessageBox()),
             viewModelFactory: x => Locator.Current.GetService(x)));
 
+        // ViewModels registration
         SplatRegistrations.Register<MainViewModel>();
         SplatRegistrations.Register<AboutViewModel>();
+        SplatRegistrations.Register<SettingsViewModel>();
+
+        // Services registration
+        SplatRegistrations.Register<IEnvironmentService, EnvironmentService>();
+        SplatRegistrations.Register<IFileSystemService, FileSystemService>();
+        SplatRegistrations.Register<ISerializationService, SerializationService>();
+        SplatRegistrations.Register<IAppUpdateService, AppUpdateService>();
+
+        // BusinessLogics registration
+        SplatRegistrations.Register<ISettingsProvider, SettingsProvider>();
+
         SplatRegistrations.SetupIOC();
     }
 
@@ -41,8 +55,7 @@ public partial class App : Application
             return;
         }
 #endif
-        var dialogService = Locator.Current.GetService<IDialogService>()!;
-        dialogService.Show(null, Main);
+        DialogService.Show(null, Main);
 
         base.OnFrameworkInitializationCompleted();
     }

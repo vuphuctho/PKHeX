@@ -3,6 +3,7 @@
         xmlns:vm="using:PKHeX.Avalonia.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
         mc:Ignorable="d"
         Height="600" Width="1000"
         CanResize="True"
@@ -19,9 +20,28 @@
                 <MenuItem Header="Tools">
                 </MenuItem>
                 <MenuItem Header="Options">
-                    <MenuItem Header="About" Command="{Binding ShowAbout}"/>
+                    <MenuItem Header="Language" Items="{Binding LanguageMenuItems}">
+                        <ItemsControl.DataTemplates>
+                            <DataTemplate DataType="vm:MenuItemViewModel">
+                                <MenuItem
+                                    Header="{Binding Header}"
+                                    Command="{Binding Command}"
+                                    CommandParameter="{Binding CommandParameter}">
+                                    <MenuItem.Icon>
+                                        <i:Icon Value="{Binding Icon}"></i:Icon>
+                                    </MenuItem.Icon>
+                                </MenuItem>
+                            </DataTemplate>
+                        </ItemsControl.DataTemplates>
+                    </MenuItem>
+                    <MenuItem Header="Settings" Command="{Binding ShowSettingsCommand}"/>
+                    <Separator></Separator>
+                    <MenuItem Header="About" Command="{Binding ShowAboutCommand}"/>
                 </MenuItem>
             </Menu>
         </DockPanel>
+        <Panel>
+            <TextBlock Text="{Binding Settings.Language}"></TextBlock>
+        </Panel>
     </StackPanel>
 </Window>

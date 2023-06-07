@@ -1,6 +1,8 @@
 ﻿using System;
 using Avalonia;
 using Avalonia.ReactiveUI;
+using Projektanker.Icons.Avalonia;
+using Projektanker.Icons.Avalonia.FontAwesome;
 
 namespace PKHeX.Avalonia;
 
@@ -18,5 +20,7 @@ class Program
         => AppBuilder.Configure<App>()
             .UsePlatformDetect()
             .LogToTrace()
+            .WithIcons(container => container
+                .Register<FontAwesomeIconProvider>())
             .UseReactiveUI();
 }
