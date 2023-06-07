@@ -15,12 +15,32 @@
         <DockPanel>
             <Menu DockPanel.Dock="Top">
                 <MenuItem Header="File">
-
+                    <MenuItem Header="Open" i:MenuItem.Icon="fa-file"></MenuItem>
+                    <MenuItem Header="Save PKM" i:MenuItem.Icon="fa-download"></MenuItem>
+                    <MenuItem Header="Export SAV" i:MenuItem.Icon="fa-floppy-disk"></MenuItem>
+                    <MenuItem Header="Quit" i:MenuItem.Icon="fa-arrow-right-from-bracket"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Tools">
+                    <MenuItem Header="Showdown" i:MenuItem.Icon="fa-star">
+                        <MenuItem Header="Import Set from Clipboard" i:MenuItem.Icon="fa-scissors"></MenuItem>
+                        <MenuItem Header="Export Set to Clipboard" i:MenuItem.Icon="fa-clipboard"></MenuItem>
+                        <MenuItem Header="Export Party to Clipboard" i:MenuItem.Icon="fa-clipboard"></MenuItem>
+                        <MenuItem Header="Export Current Box to Clipboard" i:MenuItem.Icon="fa-clipboard"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Data" i:MenuItem.Icon="fa-file-code">
+                        <MenuItem Header="Load Boxes" i:MenuItem.Icon="fa-box-archive"></MenuItem>
+                        <MenuItem Header="Dump Boxes" i:MenuItem.Icon="fa-trash"></MenuItem>
+                        <MenuItem Header="Dump Box" i:MenuItem.Icon="fa-trash"></MenuItem>
+                        <MenuItem Header="Box Data Report" i:MenuItem.Icon="fa-list-ul"></MenuItem>
+                        <MenuItem Header="PKM Database" i:MenuItem.Icon="fa-table-cells"></MenuItem>
+                        <MenuItem Header="Mystery Gift Database" i:MenuItem.Icon="fa-gift"></MenuItem>
+                        <MenuItem Header="Encounter Database" i:MenuItem.Icon="fa-users"></MenuItem>
+                        <MenuItem Header="Batch Editor" i:MenuItem.Icon="fa-file-pen"></MenuItem>
+                    </MenuItem>
+                    <MenuItem Header="Open Folder" i:MenuItem.Icon="fa-folder-open"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="Options">
-                    <MenuItem Header="Language" Items="{Binding LanguageMenuItems}">
+                    <MenuItem Header="Language" i:MenuItem.Icon="fa-globe" Items="{Binding LanguageMenuItems}">
                         <ItemsControl.DataTemplates>
                             <DataTemplate DataType="vm:MenuItemViewModel">
                                 <MenuItem
@@ -35,9 +55,9 @@
                             </DataTemplate>
                         </ItemsControl.DataTemplates>
                     </MenuItem>
-                    <MenuItem Header="Settings" Command="{Binding ShowSettingsCommand}"/>
+                    <MenuItem Header="Settings" i:MenuItem.Icon="fa-cog" Command="{Binding ShowSettingsCommand}"/>
                     <Separator></Separator>
-                    <MenuItem Header="About" Command="{Binding ShowAboutCommand}"/>
+                    <MenuItem Header="About" i:MenuItem.Icon="fa-circle-info" Command="{Binding ShowAboutCommand}"/>
                 </MenuItem>
             </Menu>
         </DockPanel>
