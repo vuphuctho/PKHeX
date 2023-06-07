@@ -63,4 +63,5 @@ public partial class App : Application
     //TODO: Move to ViewModelLocator
     public static MainViewModel Main => Locator.Current.GetService<MainViewModel>()!;
     public static IDialogService DialogService => Locator.Current.GetService<IDialogService>()!;
+    public static AboutViewModel About => Locator.Current.GetService<AboutViewModel>()!;
 }

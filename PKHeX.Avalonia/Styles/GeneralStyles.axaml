@@ -14,5 +14,10 @@
     <Style Selector="TabItem:selected">
         <Setter Property="BorderThickness" Value="0"></Setter>
     </Style>
+    <Style Selector="TextBlock.about">
+        <Setter Property="FontSize" Value="16"></Setter>
+        <Setter Property="Padding" Value="12 10"></Setter>
+        <Setter Property="TextWrapping" Value="Wrap"></Setter>
+    </Style>
 </Styles>
 

@@ -2,9 +2,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:vm="using:PKHeX.Avalonia.ViewModels"
+        xmlns:local="using:PKHeX.Avalonia"
         mc:Ignorable="d"
         Width="600" Height="600" CanResize="False"
         x:Class="PKHeX.Avalonia.Views.AboutView"
+        d:DataContext="{x:Static local:App.About}"
+        x:DataType="vm:AboutViewModel"
         Title="About">
     <TabControl HorizontalAlignment="Left">
         <TabItem>
@@ -12,7 +16,7 @@
                 <TextBlock FontSize="16">Shortcuts</TextBlock>
             </TabItem.Header>
             <ScrollViewer>
-                <TextBlock>TBU</TextBlock>
+                <TextBlock Classes="about" Text="{Binding ShortcutText}"></TextBlock>
             </ScrollViewer>
         </TabItem>
         <TabItem IsSelected="True">
@@ -20,7 +24,7 @@
                 <TextBlock FontSize="16">Changelogs</TextBlock>
             </TabItem.Header>
             <ScrollViewer>
-                <TextBlock>TBU 2</TextBlock>
+                <TextBlock Classes="about" Text="{Binding ChangelogText}"></TextBlock>
             </ScrollViewer>
         </TabItem>
     </TabControl>
