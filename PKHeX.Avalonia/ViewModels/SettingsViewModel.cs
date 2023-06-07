@@ -6,14 +6,9 @@ namespace PKHeX.Avalonia.ViewModels;
 
 public class SettingsViewModel : ViewModelBase
 {
-    private readonly ISettingsProvider _settingsProvider;
 
-    public SettingsViewModel(
-        ISettingsProvider settingsProvider)
+    public SettingsViewModel()
     {
-        _settingsProvider = settingsProvider;
-        Settings = settingsProvider.Load();
     }
 
-    [Reactive] public AppSettings Settings { get; set; }
 }

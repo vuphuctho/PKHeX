@@ -40,5 +40,6 @@
 
     <ItemGroup>
       <Folder Include="Utils\Attributes\" />
+      <Folder Include="ViewModels\Settings\" />
     </ItemGroup>
 </Project>

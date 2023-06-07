@@ -26,7 +26,8 @@
                                 <MenuItem
                                     Header="{Binding Header}"
                                     Command="{Binding Command}"
-                                    CommandParameter="{Binding CommandParameter}">
+                                    CommandParameter="{Binding CommandParameter}"
+                                    >
                                     <MenuItem.Icon>
                                         <i:Icon Value="{Binding Icon}"></i:Icon>
                                     </MenuItem.Icon>

@@ -2,16 +2,114 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:v="using:PKHeX.Avalonia.Views.Settings"
         mc:Ignorable="d"
         Width="800" Height="450" CanResize="True"
         x:Class="PKHeX.Avalonia.Views.SettingsView"
         Title="SettingsView">
     <StackPanel>
-        <TabControl>
+        <TabControl TabStripPlacement="Left">
             <TabItem>
                 <TabItem.Header>
-                    <TextBlock>General</TextBlock>
+                    <TextBlock>Hover</TextBlock>
                 </TabItem.Header>
+                <v:HoverSettingsView></v:HoverSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Import</TextBlock>
+                </TabItem.Header>
+                <v:ImportSettingsView></v:ImportSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Legality</TextBlock>
+                </TabItem.Header>
+                <v:LegalitySettingsView></v:LegalitySettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>MysteryDb</TextBlock>
+                </TabItem.Header>
+                <v:MysteryDbSettingsView></v:MysteryDbSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Privacy</TextBlock>
+                </TabItem.Header>
+                <v:PrivacySettingsView></v:PrivacySettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>SlotWrite</TextBlock>
+                </TabItem.Header>
+                <v:SlotWriteSettingsView></v:SlotWriteSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Sounds</TextBlock>
+                </TabItem.Header>
+                <v:SoundSettingsView></v:SoundSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Sprite</TextBlock>
+                </TabItem.Header>
+                <v:SpriteSettingsView></v:SpriteSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Startup</TextBlock>
+                </TabItem.Header>
+                <v:StartupSettingsView></v:StartupSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Advanced</TextBlock>
+                </TabItem.Header>
+                <v:AdvancedSettingsView></v:AdvancedSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Backup</TextBlock>
+                </TabItem.Header>
+                <v:BackupSettingsView></v:BackupSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Bulk</TextBlock>
+                </TabItem.Header>
+                <v:BulkSettingsView></v:BulkSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Display</TextBlock>
+                </TabItem.Header>
+                <v:DisplaySettingsView></v:DisplaySettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>Draw</TextBlock>
+                </TabItem.Header>
+                <v:DrawSettingsView></v:DrawSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>EncounterDb</TextBlock>
+                </TabItem.Header>
+                <v:EncounterDbSettingsView></v:EncounterDbSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>EntityDb</TextBlock>
+                </TabItem.Header>
+                <v:EntityDbSettingsView></v:EntityDbSettingsView>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <TextBlock>EntityEditor</TextBlock>
+                </TabItem.Header>
+                <v:EntityEditorSettingsView></v:EntityEditorSettingsView>
             </TabItem>
         </TabControl>
     </StackPanel>
